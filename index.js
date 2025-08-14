@@ -15,12 +15,18 @@
 
 // console.log(factorial(5))
 
-const {readFileData,appendFileData} = require("./fileOperation");
 
-console.log("Initial file content");
-readFileData();
-console.log("append data to data.txt");
-appendFileData();
 
-console.log("Updated file");
-readFileData();
+// const {readFileData,appendFileData} = require("./fileOperation");
+
+// console.log("Initial file content");
+// readFileData();
+// console.log("append data to data.txt");
+// appendFileData();
+
+// console.log("Updated file");
+// readFileData();
+
+const getsysinfo = require("./systeminfo");
+
+getsysinfo();
