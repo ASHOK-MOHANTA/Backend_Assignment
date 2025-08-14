@@ -27,6 +27,18 @@
 // console.log("Updated file");
 // readFileData();
 
-const getsysinfo = require("./systeminfo");
 
-getsysinfo();
+// const getsysinfo = require("./systeminfo");
+
+// getsysinfo();
+
+const createBoxes = require("./boxStyle");
+
+const title = "Hello!!!";
+const message = "I am using frst external module!!!!";
+
+const {classicBox,singleDoubleBox,roundedBox} = createBoxes(title,message);
+
+console.log(classicBox);
+console.log(singleDoubleBox);
+console.log(roundedBox)
