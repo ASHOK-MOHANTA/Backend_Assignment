@@ -1,44 +1,16 @@
+const express = require("express");
 
-// const isPrime = require("./isPrime");
+const app =express();
+const port = 3000;
 
-// const nums = [2,5,8,10,15,17,19,"ashok"];
+app.get("/home",(req,res)=>{
+    res.send("This is home page")
+});
 
-// nums.forEach(num =>{
-//     if(isPrime(num)){
-//         console.log(`${num} is a prime number`);
-//     }else{
-//         console.log(`${num} is not a prime number`);
-//     }
-// })
+app.get("/contact",(req,res)=>{
+    res.send("Contact Us at contact@gmail.com");
+})
 
-// const factorial = require("./factorial");
-
-// console.log(factorial(5))
-
-
-
-// const {readFileData,appendFileData} = require("./fileOperation");
-
-// console.log("Initial file content");
-// readFileData();
-// console.log("append data to data.txt");
-// appendFileData();
-
-// console.log("Updated file");
-// readFileData();
-
-
-// const getsysinfo = require("./systeminfo");
-
-// getsysinfo();
-
-const createBoxes = require("./boxStyle");
-
-const title = "Hello!!!";
-const message = "I am using frst external module!!!!";
-
-const {classicBox,singleDoubleBox,roundedBox} = createBoxes(title,message);
-
-console.log(classicBox);
-console.log(singleDoubleBox);
-console.log(roundedBox)
+app.listen(port,()=>{
+    console.log(`App is running at port ${port}`)
+})
